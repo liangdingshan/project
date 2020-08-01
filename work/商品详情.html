@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no, viewport-fit=cover">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #top{
+            width: 375px;
+            height: 578px;
+            border-radius: 12px;
+            background-color: white;
+        }
+        #top div:nth-child(1){
+            width: 375px;
+            height: 375px;
+        }
+        #top #info{
+            width: 375px;
+            height: 203px;
+        }
+        #top #info div:nth-child(1){
+            width: 339px;
+            height: 40px;
+            margin: auto;
+        }
+        #top #info div:nth-child(2){
+            width: 339px;
+            height: 156px;
+            margin: auto;
+        }
+        #youhui{
+            width: 375px;
+            height: 120px;
+            border-radius: 12px;
+            background-color: white;
+            margin-top: 10px;
+        }
+        #youhui .youhui1{
+            width: 281px;
+            height: 84px;
+            margin: auto;
+            padding: 15px;
+        }
+        #youhui .youhui1 div{
+            width: 281px;
+            height: 13px;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        #songhuo{
+            width: 375px;
+            height: 278px;
+            margin-top: 10px;
+            background-color: white;
+            border-radius: 12px;
+            display: flex;
+            flex-wrap:wrap;
+            line-height: 20px;
+        }
+        #songhuo div:nth-child(1){
+            width: 339px;
+            height: 76px;
+            margin: auto;
+            padding: 10px;
+            line-height: 30px;
+        }
+        #songhuo div:nth-child(2){
+            width: 339px;
+            height: 93px;
+            margin: auto;
+            line-height: 30px;
+        }
+        #songhuo div:nth-child(3){
+            width: 339px;
+            height: 55px;
+            margin: auto;
+            line-height: 30px;
+        }
+
+        #answer{
+            width: 375px;
+            height: 108px;
+            margin-top: 10px;
+            background-color: white;
+            border-radius: 12px;
+            display: flex;
+            flex-wrap:wrap;
+        }
+        #answer>div{
+            margin: auto;
+        }
+        #answer div:nth-child(1){
+            width: 332px;
+            height: 44px;
+            line-height: 36px;
+        }
+        #answer div:nth-child(2){
+            width: 332px;
+            height: 30px;
+        }
+        #answer div:nth-child(3){
+            width: 332px;
+            height: 30px;
+        }
+
+        #bot{
+            width: 375px;
+            height: 440px;
+            margin-top: 10px;
+            background-color: white;
+            border-radius: 12px;
+        }
+       #bot #low{
+            width: 340px;
+            height: 430px;
+            margin: auto;
+            display: flex;
+            flex-wrap:wrap;
+            justify-content: space-between;
+        }
+        #bot #low div:nth-child(1),#bot #low div:nth-child(2){
+            width: 168px;
+            height: 40px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 40px;
+        }
+
+        #bot #low div{
+            width: 110px;
+            height: 180px;
+        }
+
+        #bot #low>div .content{
+            width: 109px;
+            height: 39px;
+            line-height: 1.5em;
+            color: #333;
+            font-size: 12px;
+            font-weight: 400;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient:vertical;
+            -webkit-line-clamp: 2 ;
+            text-overflow: ellipsis;
+            white-space: normal;
+        }
+        #nav{
+            width: 375px;
+            height:52px;
+            background-color: white;
+            position: fixed;
+            bottom: 0;
+            display: flex;
+        }
+        #nav div{
+            width: 55px;
+            height: 50px;
+            text-align: center;
+        }
+        #nav div img{
+            width: 25px;
+            height: 25px;
+            margin: 5px auto 0;
+            text-align: center;
+        }
+        #nav div .txt{
+            font-size: 9px;
+            color: #262626;
+            display: block;
+            line-height: 9px;
+        }
+        #nav .shopping{
+            width: 210px;
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+        }
+        #nav .shopping .shop{
+            width: 104px;
+            height: 38px;
+            margin: 6px;
+            border-radius: 21px;
+            background-color: #f2140c;
+            line-height: 38px;
+            text-align: center;
+            color: #fff;
+            font-size: 13px;
+        }
+        #nav .shopping .shop1{
+            width: 104px;
+            height: 38px;
+            margin: 6px;
+            border-radius: 21px;
+            background-color: #ffba0d;
+            line-height: 38px;
+            text-align: center;
+            color: #fff;
+            font-size: 13px;
+        }
+        #di{
+            width: 375px;
+            height: 2200px;
+            background-color:ghostwhite;
+            position: absolute;
+            top: 130px;
+            border-radius: 20px;
+            display: none;
+
+        }
+        .a:hover #di{
+            display: block;
+        }
+
+        #gouwutop{
+            width: 375px;
+            height: 118px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #gouwutop>div:nth-child(1){
+            width: 100px;
+            height: 100px;
+            margin: auto;
+            background-image: url("https://m.360buyimg.com/mobilecms/s750x750_jfs/t1/104564/19/3224/111517/5ddcc79bE999948ef/4bc0842a3899399c.jpg!q80.dpg.webp");
+            background-size: 100px 100px;
+        }
+        #gouwutop #gouwuright{
+            width: 245px;
+            height: 100px;
+            margin: auto;
+
+        }
+        #gouwutop #gouwuright div:nth-child(1){
+            width: 245px;
+            height: 30px;
+        }
+        #gouwutop #gouwuright div:nth-child(2){
+            width: 245px;
+            height: 70px;
+        }
+
+        #botton{
+            width: 339px;
+            height:38px;
+            position: fixed;
+            bottom: 0;
+            text-align: center;
+            line-height: 38px;
+            margin-left: 17px;
+            margin-bottom: 6px;
+            background-color: #f2140c;
+            color: white;
+            border-radius:21px ;
+        }
+        #type{
+            width: 375px;
+            height: 360px;
+        }
+        #type>span{
+            padding: 0 18px;
+            overflow: hidden;
+            height: 30px;
+            line-height: 30px;
+            float: left;
+            text-align: center;
+            margin-left: 15px;
+            margin-bottom: 10px;
+            font-size: 11px;
+            color: #262626;
+            background: gainsboro;
+            border-radius: 15px;
+        }
+        #type .item{
+            background: #fcedeb;
+            border: 1px solid #f2270c;
+            font-size: 11px;
+            color: #f2270c;
+            font-weight: 700;
+            height: 28px;
+        }
+
+        .active{
+            background: #fcedeb;
+            border: 1px solid #f2270c;
+            font-size: 11px;
+            color: #f2270c;
+            font-weight: 700;
+            height: 28px;
+            padding: 0 18px;
+            line-height: 30px;
+            float: left;
+            text-align: center;
+            margin-left: 12px;
+            border-radius: 15px;
+        }
+        .title {
+            color: #333;
+            font-weight: 700;
+            height: 40px;
+            line-height: 40px;
+            margin-top: 20px;
+        }
+
+        .name {
+            position: relative;
+            padding-left: 25px;
+            font-size: 13px;
+            color: #333;
+            font-weight: 400;
+        }
+        .guide {
+            position: relative;
+            float: right;
+            padding-right: 17px;
+            font-size: 12px;
+            color: #8c8c8c;
+            font-weight: 400;
+        }
+
+        #baozhang{
+            width: 339px;
+            height: 265px;
+            margin-top: 9px;
+            margin-left: 16px;
+            background: gainsboro;
+            border-radius: 6px;
+        }
+        #baozhang>div{
+            width: 339px;
+            height: 64px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #baozhang>div .left{
+            width: 40px;
+            height: 40px;
+            margin-top: 20px;
+            margin-left: 15px;
+        }
+        #baozhang>div .right{
+            width: 269px;
+            height: 40px;
+            margin-top: 20px;
+        }
+        #baoxiu{
+            width: 339px;
+            height: 132px;
+            margin-top: 9px;
+            margin-left: 16px;
+            background: gainsboro;
+            border-radius: 6px;
+        }
+        #baoxiu>div{
+            width: 339px;
+            height: 64px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #baoxiu>div .left{
+            width: 40px;
+            height: 40px;
+            margin-top: 20px;
+            margin-left: 15px;
+        }
+        #baoxiu>div .right{
+            width: 269px;
+            height: 40px;
+            margin-top: 20px;
+        }
+        #tehui{
+            width: 339px;
+            height: 198px;
+            margin-top: 9px;
+            margin-left: 16px;
+            background: gainsboro;
+            border-radius: 6px;
+        }
+        #tehui>div{
+            width: 339px;
+            height: 64px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #tehui>div .left{
+            width: 40px;
+            height: 40px;
+            margin-top: 20px;
+            margin-left: 15px;
+        }
+        #tehui>div .right{
+            width: 269px;
+            height: 40px;
+            margin-top: 20px;
+        }
+
+        #pingjia{
+            width: 375px;
+            height: 370px;
+            margin-top: 10px;
+            background-color: white;
+            border-radius: 12px;
+        }
+        #pingjia>div{
+            margin: auto;
+        }
+        #pingjia div:nth-child(1){
+            width: 321px;
+            height: 45px;
+            line-height: 45px;
+        }
+        #pingjia div:nth-child(2){
+            width: 339px;
+            height: 83px;
+        }
+        #pingjia div:nth-child(2)>span{
+            margin: 5px 12px 12px 0;
+            background: #fcedeb;
+            border-radius: 15px;
+            display: inline-block;
+            padding: 0 10px;
+            height: 30px;
+            line-height: 30px;
+            font-size: 11px;
+            color: #262626;
+        }
+        #pingjia .haoping{
+            width: 339px;
+            height: 180px;
+        }
+        #pingjia .haoping>div{
+            margin-top: 11px;
+        }
+        #pingjia .haoping div:nth-child(1){
+            width: 339px;
+            height: 21px;
+        }
+        #pingjia .haoping div:nth-child(2){
+            width: 339px;
+            height: 50px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            white-space: normal;
+            font-size: 12px;
+        }
+        #pingjia .haoping div:nth-child(3){
+            width: 339px;
+            height: 80px;
+        }
+        #pingjia div:nth-child(4){
+            width: 339px;
+            height: 40px;
+        }
+        #pingjia div:nth-child(4) .allpinglun{
+            margin: auto;
+            width: 100px;
+            height: 25px;
+            line-height: 25px;
+            font-size: 12px;
+            text-align: center;
+            color: #262626;
+            border: solid 1px #8c8c8c;
+            border-radius: 40px;
+            position: relative;
+            top: 8px;
+        }
+
+        #dianpu{
+
+            width: 375px;
+            height: 200px;
+            margin-top: 10px;
+            background-color: white;
+            border-radius: 12px;
+        }
+        #dianpu>div{
+            margin: auto;
+            margin-top: 8px;
+        }
+        #dianpu div:nth-child(1){
+            width: 339px;
+            height: 50px;
+        }
+        #dianpu .dian1{
+            width: 339px;
+            height: 70px;
+            display: flex;
+            text-align: center;
+            line-height: 25px;
+        }
+        #dianpu .dian1 div:nth-child(1){
+            width: 110px;
+            height: 80px;
+        }
+        #dianpu .dian1 div:nth-child(2){
+            width: 110px;
+            height: 80px;
+        }
+        #dianpu .dian1 div:nth-child(3){
+            width: 110px;
+            height: 80px;
+        }
+
+        #dianpu>div:nth-child(3){
+            width: 280px;
+            height: 50px;
+            display: flex;
+            text-align: center;
+            line-height: 30px;
+            font-size: 13px;
+        }
+        #dianpu>div:nth-child(3) .dianleft{
+
+            width: 104px;
+            height: 30px;
+            margin: auto;
+            border-radius: 15px;
+            border: solid 1px #999;
+        }
+        #dianpu>div:nth-child(3) .dianright{
+
+            width: 104px;
+            height: 30px;
+            margin: auto;
+            border-radius: 15px;
+            border: solid 1px #999;
+        }
+
+
+    </style>
+</head>
+<body style="width: 375px;height: 2230px;background-color: ghostwhite">
+
+<div id="top">
+    <div>
+        <img style="width: 375px;height: 375px" src="https://m.360buyimg.com/mobilecms/s750x750_jfs/t1/104564/19/3224/111517/5ddcc79bE999948ef/4bc0842a3899399c.jpg!q80.dpg.webp">
+
+        <div style="width: 375px;height: 45px;position:absolute;top:0">
+            <a href="京东手机端首页.html"><div style="width: 30px;height: 30px;float: left;margin: 6px">
+                <img style="width: 26px;height: 26px" src="../imgs/首页.png">
+            </div></a>
+            <div style="width: 30px;height: 30px;float: right;margin: 6px">
+                <img style="width: 26px;height: 26px" src="../imgs/更多.png">
+            </div>
+        </div>
+
+    </div>
+    <div id="info">
+
+        <div>
+            <span style="float: left;color: red">￥<strong style="font-size: 30px;">588</strong>.00</span>
+            <span style="float:right;font-size: 9px;color: #262626;position: relative;top: 20px;right: 19px">收藏</span>
+            <span style="float: right"><img style="width: 18px;height: 18px;position: relative;top: 5px;" src="../imgs/收藏.png"></span>
+        </div>
+
+        <div>
+            <div style="width: 339px;height: 84px;font-size: 16px;color: #262626;margin-top: 10px;font-weight: bold">
+                正品新款超薄平板电脑10.1英寸二合一学习机游戏全网通上网手机5GWIFI安卓ipad 天空蓝(6G+64G)送大礼包+三年换新+五年保修 极速双频5GWIFI+全网通4G版
+            </div>
+            <div style="width: 339px;height: 48px;color: #666666;font-size: 12px;margin-top: 10px">
+                高清屏2560*1600，6G运行，影音娱乐平板，性价比之作！【畅玩手游】全网通4G网，大存储，下单送豪礼
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="youhui">
+    <div class="youhui1">
+        <div>
+            <span style="color: #262626;font-weight: 700;margin-top: 1px;position: absolute;left: 30px;">优惠</span>
+
+            <span style="border: solid 1px red;color: red;font-size: 12px">满600减20</span>&nbsp;&nbsp;&nbsp;&nbsp;
+            <span style="border: solid 1px red;color: red;font-size: 12px">满500减13</span>&nbsp;&nbsp;&nbsp;&nbsp;
+            <span style="background-color:red;color: white;font-size: 12px">新用户专享</span>
+        </div>
+        <div>
+            <span style="border: solid 1px red;color: red;font-size: 12px">赠品</span>
+            <span style="color: #333333;font-size: 13px">纽麦（NERLMIAY） 平板电脑专...</span>
+        </div>
+        <div>
+            <span style="border: solid 1px red;color: red;font-size: 12px">免费领</span>
+            <span style="color: #333333;font-size: 13px">体验卡免费领，超大流量任性用</span>
+        </div>
+    </div>
+</div>
+
+<div id="songhuo">
+    <div>
+        <span style="color: #262626;font-weight: 700;">已选</span>&nbsp;&nbsp;&nbsp;
+        <span style="font-size: 13px;color: #333;line-height: 22px;">天空蓝(6G+64G)送大礼包+三年换新+五年</span><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size: 13px;color: #8c8c8c;">本商品支持保障服务，点击可选服务</span>
+    </div>
+
+    <div>
+        <span style="color: #262626;font-weight: 700;">送至</span>&nbsp;&nbsp;&nbsp;
+        <span style="font-size: 13px;color: #333;line-height: 22px;">北京朝阳区三环到四环之间</span><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size: 13px;color: #8c8c8c;">现货现在至明日00:00前完成下单，预计7月28日</span><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size: 13px;color: #8c8c8c;"> 22:00前发货，7月31日24:00前送达</span>
+    </div>
+
+    <div>
+        <span style="color: #262626;font-weight: 700;">运费</span>&nbsp;&nbsp;&nbsp;
+        <span style="font-size: 13px;color: #333;line-height: 22px;">免运费</span><br>
+    </div>
+</div>
+
+<div id="pingjia">
+
+    <div>
+        <span><strong>评价</strong></span>
+        <span style="font-size: 10px;"><strong>5300+</strong></span>
+        <span style="float: right;"><img style="width: 15px;height: 15px;position: relative;top: 2px;" src="../imgs/右返回.png"></span>
+        <span style="float: right;color: #8c8c8c;font-size: 12px">好评度 <strong>94%</strong></span>
+    </div>
+    <div>
+        <span>反应灵敏(45)</span> <span>功能齐全(11)</span> <span>尺寸合适(9)</span>
+        <span>轻薄精巧(1)</span>
+    </div>
+    <div class="haoping">
+
+        <div>
+            <img src="https://img11.360buyimg.com/jdphoto/s40x40_jfs/t1/25255/18/10701/1678/5c89f892E78c04688/684d63c0d68e39b1.png" style="width: 20px;height: 20px;position: relative;bottom: 8px;">
+            <span style="font-size: 12px;color: #262626;position: relative;bottom: 8px;">我***鱼</span>
+            <span><img style="width: 25px;height: 25px" src="../imgs/星星.png"></span>
+            <span><img style="width: 25px;height: 25px;margin-left: -10px" src="../imgs/星星.png"></span>
+            <span><img style="width: 25px;height: 25px;margin-left: -10px" src="../imgs/星星.png"></span>
+            <span><img style="width: 25px;height: 25px;margin-left: -10px" src="../imgs/星星.png"></span>
+            <span><img style="width: 25px;height: 25px;margin-left: -10px" src="../imgs/星星.png"></span>
+            <span style="float: right;color: #999;font-size: 12px;height: 12px;position: relative;bottom: 8px;">2020-07-23</span>
+        </div>
+        <div>外观材质：材质手感不错，很有档次。
+            屏幕效果：屏幕分辨率高，细腻，感官一流
+            运行速度：一般的游戏都可以运行，速度不错
+            轻薄程度：便于随身携带，电池用电后期使用后追加评论。
+        </div>
+
+        <div>
+            <img style="width: 80px;height: 80px" src="https://img30.360buyimg.com/shaidan/s128x96_jfs/t1/113504/37/5674/197170/5eb50263Ea0fcd1e0/c7514275a53b4cd9.jpg!cc_100x100!q70.dpg.webp">
+            <img style="width: 80px;height: 80px" src="https://img30.360buyimg.com/shaidan/s128x96_jfs/t1/112850/33/5636/151869/5eb50265E29653696/475eb6321e3aebe5.jpg!cc_100x100!q70.dpg.webp">
+            <img style="width: 80px;height: 80px" src="https://img30.360buyimg.com/shaidan/s128x96_jfs/t1/116245/14/5560/173038/5eb50266E54b674bb/a2fa0be8e208f728.jpg!cc_100x100!q70.dpg.webp">
+            <img style="width: 80px;height: 80px" src="https://img30.360buyimg.com/shaidan/s128x96_jfs/t1/112736/17/5661/149658/5eb50267E2b0ed1ca/ff7dee75ba780dab.jpg!cc_100x100!q70.dpg.webp">
+        </div>
+    </div>
+
+    <div>
+
+        <div class="allpinglun">
+            查看全部评论
+        </div>
+
+    </div>
+
+</div>
+
+<div id="answer">
+    <div>
+        <span style="color: #262626;font-size: 15px">问答</span><img style="width: 12px;height: 12px;float: right;margin-top: 12px;margin-right: 3px" src="../imgs/右返回.png">
+        <span style="font-size: 12px;color: #8c8c8c;margin-right: 10px;float: right">查看全部回答</span>
+    </div>
+    <div>
+        <span style="width: 16px;height: 16px;background-color: #ff9600;color: #fff;font-size: 13px;text-align: center;">问</span>
+        <span style="color: #333;font-size: 12px;">卡屏吗</span><span style="float: right;color: #999;font-size: 12px;">共2个回答</span>
+    </div>
+    <div>
+        <span style="width: 16px;height: 16px;background-color: #ff9600;color: #fff;font-size: 13px;text-align: center;">问</span>
+        <span style="color: #333;font-size: 12px;">怎么指有学习的页面</span><span style="float: right;color: #999;font-size: 12px;">暂无回答</span>
+    </div>
+</div>
+
+<div id="dianpu">
+
+    <div>
+        <img style="width: 40px;height: 40px" src="https://img14.360buyimg.com/cms/jfs/t1/81773/31/2415/57767/5d0b0d2eE25a128d5/cbda8a097db49c1b.jpg!q70.dpg.webp">
+        <span style="font-size: 15px;color: #333333;margin-left: 3px;position: relative;top: -12px;">纽麦平板电脑官方旗舰店</span>
+    </div>
+
+    <div class="dian1">
+
+        <div>
+            <p style="font-size: 14px">2.1万</p>
+            <p style="margin-top: 3px;font-size: 10px;color: #999;">粉丝人数</p>
+        </div>
+        <div>
+            <p style="font-size: 14px">95</p>
+            <p style="margin-top: 3px;font-size: 10px;color: #999;">全部商品</p>
+        </div>
+        <div>
+            <p style="color: #18c461;font-size: 10px"><span style="margin-top: 3px;font-size: 10px;color: #999;">评价</span> 8.00 | 低</p>
+            <p style="color: #e4393c;;font-size: 10px"><span style="margin-top: 3px;font-size: 10px;color: #999;">物流</span> 9.01 | 中</p>
+            <p style="color: #18c461;font-size: 10px"><span style="margin-top: 3px;font-size: 10px;color: #999;">售后</span> 8.48 | 低</p>
+        </div>
+
+    </div>
+
+    <div>
+
+        <div class="dianleft">
+            <img style="width: 18px;height: 18px;position: relative;top: 5px;" src="../imgs/收藏1.png">
+            关注店铺
+        </div>
+        <div class="dianright">
+            <img style="width: 18px;height: 18px;position: relative;top: 5px;" src="../imgs/店铺.png">
+            进入店铺
+        </div>
+
+    </div>
+
+
+</div>
+
+<div id="bot">
+
+<div id="low">
+    <div>配件推荐</div>
+    <div>猜你喜欢</div>
+    <div>
+        <img style="width: 109px;height: 109px" src="https://img14.360buyimg.com/mobilecms/s270x270_jfs/t1/70480/15/10507/116981/5d804b5eE6ad11095/0504354533dc96ed.jpg!q70.dpg.webp">
+        <div class="content">2020新款平板电脑10.1英寸全网通4G安卓平板手机十核8G游戏平板高清学习机大屏娱乐吃鸡平板 富贵银32G 移动联通2/3G/WIFI普通版（4G运行）</div>
+        <p style=""><span style="color: #f2270c;font-size: 12px"><strong style="font-size: 16px">￥298</strong>.00</span></p>
+    </div>
+    <div>
+        <img style="width: 109px;height: 109px" src="https://img14.360buyimg.com/mobilecms/s270x270_jfs/t1/110409/39/11372/201600/5e8722caE852b11de/4591e4f9712450b0.jpg!q70.dpg.webp">
+        <div class="content">新款5G平板电脑12英寸ipad影音娱乐二合一超薄平板电脑十核通话5GWiFi安卓大屏平板手机 曜石黑【6G+32G】 移动联通【4G+WiFi版】</div>
+        <p style=""><span style="color: #f2270c;font-size: 12px"><strong style="font-size: 16px">￥378</strong>.00</span></p>
+    </div>
+    <div>
+        <img style="width: 109px;height: 109px" src="https://img14.360buyimg.com/mobilecms/s270x270_jfs/t1/118685/15/2016/143276/5e9dc1e1Ed703b961/cfd9b2d8a1a5fe14.jpg!q70.dpg.webp">
+        <div class="content">2020新款平板电脑10.1英寸全网通4G安卓平板手机十核8G游戏平板高清学习机大屏娱乐吃鸡平板 土豪金32G 移动联通2/3GWIF普通版（4G运行）</div>
+        <p style=""><span style="color: #f2270c;font-size: 12px"><strong style="font-size: 16px">￥668</strong>.00</span></p>
+    </div>
+    <div>
+        <img style="width: 109px;height: 109px" src="https://img14.360buyimg.com/mobilecms/s270x270_jfs/t1/137287/14/58/200572/5ec7df84E5cf033b2/656a26cc1cf8fffb.jpg!q70.dpg.webp">
+        <div class="content">新款5G平板电脑12英寸ipad影音娱乐二合一超薄平板电脑十核通话5GWiFi安卓大屏平板手机 曜石黑【6G+32G】 移动联通【4G+WiFi版】</div>
+        <p style=""><span style="color: #f2270c;font-size: 12px"><strong style="font-size: 16px">￥468</strong>.00</span></p>
+    </div>
+    <div>
+        <img style="width: 109px;height: 109px" src="https://img14.360buyimg.com/mobilecms/s270x270_jfs/t1/97591/37/1733/96037/5dc3ee3bEe3814738/076178f18708bd0f.jpg!q70.dpg.webp">
+        <div class="content">新款ipad平板手机安卓游戏平板电脑4G全网通话12寸学生上网课 移动联通银色【6+128G】5GWiFi+15豪礼</div>
+        <p style=""><span style="color: #f2270c;font-size: 12px"><strong style="font-size: 16px">￥588</strong>.00</span></p>
+    </div>
+    <div>
+        <img style="width: 109px;height: 109px" src="https://img14.360buyimg.com/mobilecms/s270x270_jfs/t1/74758/19/5996/141344/5d4275ddEf4ab9317/c598c68cf016eeef.jpg!q70.dpg.webp">
+        <div class="content">2020新款平板电脑10.1英寸全网通4G安卓平板手机十核8G游戏平板高清学习机大屏娱乐吃鸡平板 土豪金32G 移动联通2/3GWIF普通版（4G运行）</div>
+        <p style=""><span style="color: #f2270c;font-size: 12px"><strong style="font-size: 16px">￥388</strong>.00</span></p>
+    </div>
+</div>
+
+</div>
+
+<div style="position: fixed; right: 0; height: 30px; line-height: 30px;
+background: #E93B3D; border-radius: 15px 0 0 15px; color: #FFF; font-size: 12px; padding: 0 27px 0 10px;top: 90px;">打开京东APP
+    <span style="position: absolute; right: 12px; top: 11px;
+    width: 6px; height: 6px; border-top: #FFF 2px solid;border-right: #FFF 2px solid; transform: rotate(45deg);"></span></div>
+<div class="a">
+<div id="nav">
+    <div>
+        <img src="../imgs/客服.png">
+        <span class="txt">客服</span>
+    </div>
+    <div>
+        <img src="../imgs/店铺.png">
+        <span class="txt">店铺</span>
+    </div>
+    <a href="购物车界面.html" style="text-decoration: none"><div>
+        <img src="../imgs/购物车.png">
+        <span class="txt">购物车</span>
+    </div></a>
+
+    <div class="shopping">
+
+       <div class="shop">
+            加入购物车
+        </div>
+        <div class="shop1">
+            立即购买
+        </div>
+    </div>
+</div>
+
+<div id="di">
+
+    <div id="gouwutop">
+
+        <div></div>
+        <div id="gouwuright">
+            <div>
+                <img style="width: 25px;height: 25px;float: right;background-color:  gainsboro;border-radius: 15px" src="../imgs/关闭.png">
+            </div>
+            <div>
+                <p style="color: red;font-size: 12px"><span>￥</span><strong style="font-size: 24px">588</strong><span>.00</span></p>
+                <p style=" overflow: hidden;display: -webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp: 2 ;text-overflow: ellipsis;white-space: normal;color: #333333;font-size: 12px;width: 245px;height: 30px">
+                    <span style="color: #8c8c8c">已选</span> 天空蓝(6G+64G)送大礼包+三年换新+五年保修，极速双频5GWIFI+全网通4G版，1个</p>
+            </div>
+        </div>
+    </div>
+
+    <div style="width: 339px;height: 40px;margin-top: 10px;margin-left: 15px;color: #262626;font-size: 13px;font-weight: 700;line-height: 40px">颜色</div>
+
+    <div id="type">
+
+        <span>天空蓝(6G+32G)送大礼包+三年换新+五年保修</span>
+        <span>曜岩黑(6G+32G)送大礼包+三年换新+五年保修</span>
+        <span>香槟金(6G+32G)送大礼包+三年换新+五年保修</span>
+        <span>曜岩黑(6G+64G)送大礼包+三年换新+五年保修</span>
+        <span>香槟金(6G+64G)送大礼包+三年换新+五年保修</span>
+        <span class="item">天空蓝(6G+64G)送大礼包+三年换新+五年保修</span>
+        <span>曜岩黑(6G+128G)送礼包+三年换新+五年保修</span>
+        <span>香槟金(6G+128G)送礼包+三年换新+五年保修</span>
+        <span>天空蓝(6G+128G)送礼包+三年换新+五年保修</span>
+
+    </div>
+
+    <div style="width: 339px;height: 40px;margin-left: 15px;color: #262626;font-size: 13px;font-weight: 700;line-height: 40px">版本</div>
+    <div style="width: 375px;height: 40px;">
+    <span class="active">极速双频5GWIFI+全网通4G版</span>
+    </div>
+    <div style="width: 375px;height: 63px;">
+       <br> <p style="width:339px;height: 31px;margin: auto ">数量
+        <span style="float: right">+</span>
+        <input style="width: 34px;height: 18px;font-size: 11px;background: #f2f2f2;border: none;text-align: center;float: right;margin-top: 3px" value="1">
+        <span style="color: gainsboro;float: right">-</span></p>
+    </div>
+    <div style="width: 339px;height: 40px;margin-top: 10px;margin-left: 15px;color: #262626;font-size: 13px;font-weight: 700;line-height: 40px">保障服务</div>
+
+    <div class="title">
+        <span class="name"><img style="width: 20px;height: 20px;position: relative;top: 3px;" src="../imgs/社会保障.png">全面保障</span>
+        <span class="guide">服务介绍<img style="width: 20px;height: 20px;position: relative;top: 5px;" src="../imgs/右返回.png"></span>
+    </div>
+
+    <div id="baozhang">
+
+        <div>
+            <div class="left"> <p style="width: 19px;height: 19px;border-radius: 50%;border: 1px solid #8c8c8c;"></p></div>
+            <div class="right">
+                <p style="font-size: 13px;color: #333;">2年全保修<span style="color: #f2270c;font-size: 10px;text-align: center;height: 16px;line-height: 16px;margin-left: 5px;border: solid 1px #f2270c">买2年送2年！</span>
+                    <span style="font-family: JDZH-Regular;color: #f2270c;float: right;font-size: 12px;">¥49.00</span></p>
+                <p style="color: #8c8c8c;font-size: 11px;">三包+摔碰挤压意外故障全保修</p>
+            </div>
+        </div>
+        <div>
+            <div class="left"> <p style="width: 19px;height: 19px;border-radius: 50%;border: 1px solid #8c8c8c;"></p></div>
+            <div class="right">
+                <p style="font-size: 13px;color: #333;">3年全保修<span style="color: #f2270c;font-size: 10px;text-align: center;height: 16px;line-height: 16px;margin-left: 5px;border: solid 1px #f2270c">已省7元</span>
+                    <span style="font-family: JDZH-Regular;color: #f2270c;float: right;font-size: 12px;">¥51.92</span></p>
+                <p style="color: #8c8c8c;font-size: 11px;">三包+摔碰挤压意外故障全保修</p>
+            </div>
+        </div>
+        <div>
+            <div class="left"> <p style="width: 19px;height: 19px;border-radius: 50%;border: 1px solid #8c8c8c;"></p></div>
+            <div class="right">
+                <p style="font-size: 13px;color: #333;">5年全保修<span style="color: #f2270c;font-size: 10px;text-align: center;height: 16px;line-height: 16px;margin-left: 5px;border: solid 1px #f2270c">嗨暑假赠蓝光镜</span>
+                    <span style="font-family: JDZH-Regular;color: #f2270c;float: right;font-size: 12px;">¥134.10</span></p>
+                <p style="color: #8c8c8c;font-size: 11px;">活动赠防蓝光眼镜，故障全保修</p>
+            </div>
+        </div>
+        <div>
+            <div class="left"> <p style="width: 19px;height: 19px;border-radius: 50%;border: 1px solid #8c8c8c;"></p></div>
+            <div class="right">
+                <p style="font-size: 13px;color: #333;">5年全保修<span style="color: #f2270c;font-size: 10px;text-align: center;height: 16px;line-height: 16px;margin-left: 5px;border: solid 1px #f2270c">线上一键报修</span>
+                    <span style="font-family: JDZH-Regular;color: #f2270c;float: right;font-size: 12px;">¥69.00</span></p>
+                <p style="color: #8c8c8c;font-size: 11px;">三包+摔碰挤压意外故障全保修</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="title">
+        <span class="name"><img style="width: 20px;height: 20px;position: relative;top: 3px;" src="../imgs/社会保障.png">延长保修</span>
+        <span class="guide">服务介绍<img style="width: 20px;height: 20px;position: relative;top: 5px;" src="../imgs/右返回.png"></span>
+    </div>
+
+    <div id="baoxiu">
+
+        <div>
+            <div class="left"> <p style="width: 19px;height: 19px;border-radius: 50%;border: 1px solid #8c8c8c;"></p></div>
+            <div class="right">
+                <p style="font-size: 13px;color: #333;">延保至3年
+                    <span style="font-family: JDZH-Regular;color: #f2270c;float: right;font-size: 12px;">¥29.00</span></p>
+                <p style="color: #8c8c8c;font-size: 11px;">三包性能故障免费维修</p>
+            </div>
+        </div>
+
+        <div>
+            <div class="left"> <p style="width: 19px;height: 19px;border-radius: 50%;border: 1px solid #8c8c8c;"></p></div>
+            <div class="right">
+                <p style="font-size: 13px;color: #333;">延保至5年
+                    <span style="font-family: JDZH-Regular;color: #f2270c;float: right;font-size: 12px;">¥59.00</span></p>
+                <p style="color: #8c8c8c;font-size: 11px;">三包性能故障免费维修</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="title">
+        <span class="name"><img style="width: 20px;height: 20px;position: relative;top: 3px;" src="../imgs/社会保障.png">促销特惠</span>
+        <span class="guide">服务介绍<img style="width: 20px;height: 20px;position: relative;top: 5px;" src="../imgs/右返回.png"></span>
+    </div>
+
+    <div id="tehui">
+
+        <div>
+            <div class="left"> <p style="width: 19px;height: 19px;border-radius: 50%;border: 1px solid #8c8c8c;"></p></div>
+            <div class="right">
+                <p style="font-size: 13px;color: #333;">1年碎屏保
+                    <span style="font-family: JDZH-Regular;color: #f2270c;float: right;font-size: 12px;">¥19.00</span></p>
+                <p style="color: #8c8c8c;font-size: 11px;">意外屏碎免费换屏一次</p>
+            </div>
+        </div>
+        <div>
+            <div class="left"> <p style="width: 19px;height: 19px;border-radius: 50%;border: 1px solid #8c8c8c;"></p></div>
+            <div class="right">
+                <p style="font-size: 13px;color: #333;">2年碎屏保<span style="color: #f2270c;font-size: 10px;text-align: center;height: 16px;line-height: 16px;margin-left: 5px;border: solid 1px #f2270c">已省6元</span>
+                    <span style="font-family: JDZH-Regular;color: #f2270c;float: right;font-size: 12px;">¥39.00</span></p>
+                <p style="color: #8c8c8c;font-size: 11px;">意外屏碎免费换屏一次</p>
+            </div>
+        </div>
+        <div>
+            <div class="left"> <p style="width: 19px;height: 19px;border-radius: 50%;border: 1px solid #8c8c8c;"></p></div>
+            <div class="right">
+                <p style="font-size: 13px;color: #333;">3年碎屏保<span style="color: #f2270c;font-size: 10px;text-align: center;height: 16px;line-height: 16px;margin-left: 5px;border: solid 1px #f2270c">已省10元</span>
+                    <span style="font-family: JDZH-Regular;color: #f2270c;float: right;font-size: 12px;">¥39.00</span></p>
+                <p style="color: #8c8c8c;font-size: 11px;">意外屏碎免费换屏一次</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="botton">确认</div>
+
+</div>
+
+</div>
+</body>
+</html>

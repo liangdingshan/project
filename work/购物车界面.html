@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>购物车界面</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no, viewport-fit=cover">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #top{
+            width: 375px;
+            height: 110px;
+            border-radius: 0 0 10px 10px;
+            background-color: white;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #top .top1{
+            width: 375px;
+            height: 44px;
+            display: flex;
+            flex-wrap: wrap;
+            text-align: center;
+            line-height: 44px;
+        }
+        #top .top1 div:nth-child(1){
+            width: 44px;
+            height: 44px;
+            background-image: url("../imgs/返回1.png");
+            background-size: 25px 25px;
+            background-repeat: no-repeat;
+            margin-top: 10px;
+        }
+        #top .top1 div:nth-child(2){
+            width: 282px;
+            height: 44px;
+            color: #333333;
+            font-size: 18px;
+        }
+        #top .top1 div:nth-child(3){
+            width: 44px;
+            height: 44px;
+            background-image: url("../imgs/更多.png");
+            background-size: 25px 25px;
+            background-repeat: no-repeat;
+            margin-top: 10px;
+        }
+        #top .top2{
+            width: 375px;
+            height: 60px;
+            color: #333333;
+            font-size: 12px;
+            display: flex;
+            flex-wrap: nowrap;
+            text-align: center;
+            align-items: center;
+            line-height: 30px;
+        }
+        #top3{
+            width: 375px;
+            height: 261px;
+            padding: 30px 0 30px;
+            text-align: center;
+        }
+        #top3>div{
+            width: 90px;
+            height: 90px;
+            margin: auto;
+            line-height: 90px;
+            background-image: url("//img11.360buyimg.com/jdphoto/s180x180_jfs/t18163/292/540553659/74408/adeb7463/5a93c51cN3bb5e37b.png");
+            background-size: 90px 90px;
+        }
+
+        #miaosha{
+            width: 360px;
+            height: 190px;
+            margin: auto;
+            background-color: white;
+        }
+        #miaosha #miaoshatop{
+            width: 356px;
+            height: 34px;
+            margin: auto;
+        }
+        #miaosha #miaoshatop .left{
+            width: 290px;
+            height: 34px;
+            float: left;
+            margin: auto;
+            white-space: nowrap;
+        }
+        #miaosha #miaoshatop .right{
+            width: 30px;
+            height: 34px;
+            float: right;
+            margin: auto;
+        }
+        #miaosha #miaoshabotton{
+            width: 356px;
+            height: 125px;
+            margin: auto;
+        }
+        #miaosha #miaoshabotton>div{
+            width: 78px;
+            height: 116px;
+            display: inline-block;
+            padding: 2px;
+            vertical-align: top;
+            text-align: center;
+        }
+        #miaosha #miaoshabotton .miaoshamoney{
+            color: #f2270c;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        #miaosha #miaoshabotton .miaoshaold{
+            color: #CCCCCC;
+            font-size: 12px;
+            text-decoration: line-through;
+        }
+
+        #youhui{
+            width: 375px;
+            height: 136px;
+            margin-top: 10px;
+            background-color: white;
+        }
+        #youhui #juan{
+            width: 355px;
+            height: 110px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #youhui #juan .juanup{
+            width: 355px;
+            height: 30px;
+            display: flex;
+        }
+        #youhui #juan .juanup div:nth-child(1){
+            width: 223px;
+            height: 30px;
+            text-align: center;
+            font-size: 16px;
+            color: #333;
+            line-height: 30px;
+            margin-top: 10px;
+        }
+        #youhui #juan .juanup div:nth-child(2){
+            width: 86px;
+            height: 30px;
+            margin-top: 10px;
+            margin-left: 30px;
+            line-height: 30px;
+            color: white;
+            text-align: center;
+            background-image: linear-gradient(-90deg,#f2270c,#ff9574);
+            box-shadow: 0 5px 10px 0 rgba(233,59,61,.2);
+            border-radius: 15px;
+        }
+        #youhui #juan .juanbot{
+            width: 118px;
+            height: 64px;
+            margin-top: 20px;
+        }
+        #youhui #juan .juanbot div:nth-child(1){
+            width: 118px;
+            height: 41px;
+            text-align: center;
+            line-height: 40px;
+            border: solid 1px #f7f7f7;
+        }
+        #youhui #juan .juanbot div:nth-child(2){
+            width: 119px;
+            height: 24px;
+            background-color: #6ed1d3;
+            color: white;
+            font-size: 12px;
+            line-height: 24px;
+        }
+        #bot{
+            width: 375px;
+            height: 1000px;
+            display: flex;
+            flex-wrap: wrap;
+            background-color: white;
+        }
+        #bot>div{
+            width: 157px;
+            height: 217px;
+            margin: auto;
+            padding: 10px;
+        }
+        #bot>div img{
+            width: 157px;
+            height: 157px;
+        }
+        #bot .botcontent{
+            width: 170px;
+            height: 32px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient:vertical;
+            -webkit-line-clamp: 2 ;
+            text-overflow: ellipsis;
+            white-space: normal;
+            font-size: 13px;
+            color: #232326;
+        }
+
+        </style>
+</head>
+<body style="background-color: #f2f2f2;height: 1500px">
+
+<div id="top">
+
+    <div class="top1">
+        <a href="京东手机端首页.html"><div></div></a>
+        <div>购物车</div>
+        <div></div>
+    </div>
+    <div class="top2">
+        <div style="margin-left: 50px">登录后可同步账户购物车中的商品</div>
+        <a style="text-decoration: none" href="京东登录界面.html"><div style="width: 58px;height: 30px;background-color:#f2270c;color:white;-webkit-border-radius: 12px;-moz-border-radius: 12px;border-radius: 15px;margin-left: 10px">登录</div></a>
+    </div>
+</div>
+
+<div id="top3">
+    <div style="margin-top: 60px; "></div><br>
+    <p style="font-size: 16px;color: #333;">登录后可同步购物车中商品</p>
+</div>
+
+<div style="text-align: center;font-size: 12px;color: #999;margin-bottom: 5px">京东秒杀</div>
+
+<div id="miaosha">
+
+    <div id="miaoshatop">
+        <div class="left">
+            <div style="width: 65px;height: 26px;float: left;color: #333;font-size: 16px;margin-top: 4px;margin-left: 10px;font-weight: 700">京东秒杀</div>
+            <div style="width: 120px;height: 26px;float: left">
+                <div style="color:red;font-size: 12px;margin-top: 5px;margin-left: 10px"><span style="color: #999999;">14点场</span>&nbsp;&nbsp;&nbsp;
+                    <span style="border: solid 1px gainsboro">01</span> <span style="border: solid 1px gainsboro">19</span> <span style="border: solid 1px gainsboro">30</span></div>
+            </div>
+        </div>
+        <div class="right">
+            <div>
+                <img style="width: 13px;height: 13px" src="../imgs/右返回.png">
+            </div>
+        </div>
+    </div>
+
+    <div id="miaoshabotton">
+        <div>
+            <img src="https://img10.360buyimg.com/mobilecms/jfs/t1/129052/34/7978/163165/5f1d28f3E68d682d5/29f3afaf91cb61dd.jpg!q70.dpg.webp" style="width: 79px;height: 79px">
+            <div class="miaoshamoney">￥68.00</div>
+            <div class="miaoshaold">￥198.00</div>
+        </div>
+        <div>
+            <img src="https://img10.360buyimg.com/mobilecms/jfs/t1/119112/23/12799/136015/5f1502dfE8632c1c7/fc357ea1410849e1.jpg!q70.dpg.webp" style="width: 79px;height: 79px">
+            <div class="miaoshamoney">￥389.00</div>
+            <div class="miaoshaold">￥789.00</div>
+        </div>
+        <div>
+            <img src="https://img10.360buyimg.com/mobilecms/jfs/t1/119395/9/6099/129637/5ec3724bE2a99db70/6075c0515aecdb18.jpg!q70.dpg.webp" style="width: 79px;height: 79px">
+            <div class="miaoshamoney">￥129.00</div>
+            <div class="miaoshaold">￥400.00</div>
+        </div>
+        <div>
+            <img src="https://img10.360buyimg.com/mobilecms/jfs/t1/139706/32/3443/196829/5f16bc51E0136ef67/0ca6c3a5cc84e604.jpg!q70.dpg.webp" style="width: 79px;height: 79px">
+            <div class="miaoshamoney">￥1999.00</div>
+            <div class="miaoshaold">￥3199.00</div>
+        </div>
+    </div>
+</div>
+
+<div id="youhui">
+
+    <div id="juan">
+        <div class="juanup">
+            <div>新用户福利&nbsp;&nbsp;专属优惠礼包</div>
+            <div>一键领取</div>
+        </div>
+        <div class="juanbot">
+            <div><span style="color: #6ed1d3;font-size: 12px">￥</span><span style="color: #6ed1d3;font-size: 24px">6</span>&nbsp;<span style="color: #999999;font-size: 12px">全品类使用</span></div>
+            <div>&nbsp;&nbsp;&nbsp;满30可用</div>
+        </div>
+    </div>
+</div>
+
+<div style="text-align: center;font-size: 12px;color: #999;margin-top: 15px;margin-bottom: 15px">可能你还想要</div>
+
+<div id="bot">
+
+    <div>
+        <img src="https://img14.360buyimg.com/n7/jfs/t1/114453/25/12115/292138/5f0bce2aE9f1353c6/4db91203668087e8.jpg!q70.dpg.webp">
+        <div class="botcontent">联想(Lenovo)天逸510S 十代英特尔酷睿i3 台式机电脑整机(i3-10100  8G 1T wifi win10 三年上门)21.5英寸</div>
+        <p style="margin-top: 6px;font-size: 16px;color: #e93b3d"><span>￥2899</span>
+        <span><img style="width:20px;height: 20px;float: right" src="../imgs/红色购物车.png "></span></p>
+    </div>
+    <div>
+        <img src="https://img14.360buyimg.com/n7/jfs/t1/104564/19/3224/111517/5ddcc79bE999948ef/4bc0842a3899399c.jpg!q70.dpg.webp">
+        <div class="botcontent">正品新款超薄平板电脑10.1英寸二合一学习机游戏全网通上网手机5GWIFI安卓ipad 天空蓝(6G+64G)送大礼包+三年换新+五年保修 极速双频5GWIFI+全网通4G版</div>
+        <p style="margin-top: 6px;font-size: 16px;color: #e93b3d"><span>￥588</span>&nbsp;&nbsp;<span style="color: #e4393c;background: #fff;border: 1px solid #e4393c; ">劵</span>
+            <span><img style="width:20px;height: 20px;float: right" src="../imgs/红色购物车.png "></span></p>
+    </div>
+    <div>
+        <img src="https://img14.360buyimg.com/n7/jfs/t1/141843/13/2546/122199/5f07dbb8Ebaf1f256/521d9a1defecaea9.jpg!q70.dpg.webp">
+        <div class="botcontent">酷比魔方 iPlay20 2020新款10.1英寸八核大屏双4G通话游戏平板电脑安卓全贴合屏 标配+钢化膜+蓝牙键盘</div>
+        <p style="margin-top: 6px;font-size: 16px;color: #e93b3d"><span>￥779</span>
+            <span><img style="width:20px;height: 20px;float: right" src="../imgs/红色购物车.png "></span></p>
+    </div>
+    <div>
+        <img src="https://img14.360buyimg.com/n7/jfs/t1/70480/15/10507/116981/5d804b5eE6ad11095/0504354533dc96ed.jpg!q70.dpg.webp">
+        <div class="botcontent">2020新款平板电脑10.1英寸全网通4G安卓平板手机十核8G游戏平板高清学习机大屏娱乐吃鸡平板 富贵银32G 移动联通2/3G/WIFI普通版（4G运行）</div>
+        <p style="margin-top: 6px;font-size: 16px;color: #e93b3d"><span>￥378</span>&nbsp;&nbsp;<span style="color: #e4393c;background: #fff;border: 1px solid #e4393c; ">劵</span>
+            <span><img style="width:20px;height: 20px;float: right" src="../imgs/红色购物车.png "></span></p>
+    </div>
+    <div>
+        <img src="https://img14.360buyimg.com/n7/jfs/t1/123340/15/6554/130146/5f03df96Ed622dda9/8af26eae43c778fa.jpg!q70.dpg.webp">
+        <div class="botcontent">酷比魔方 iPlay10 Pro 10.1英寸大屏娱乐安卓平板电脑2019新款pad  3G/32G 前黑后灰（3G+32G，wifi版）</div>
+        <p style="margin-top: 6px;font-size: 16px;color: #e93b3d"><span>￥559</span>
+            <span><img style="width:20px;height: 20px;float: right" src="../imgs/红色购物车.png "></span></p>
+    </div>
+    <div>
+        <img src="https://img14.360buyimg.com/n7/jfs/t1/116947/19/12705/696339/5f167495E29785268/c6594c823d03faae.png.webp">
+        <div class="botcontent">【1999起+扫地机】OPPO A92s 5G新品手机 超感屏前置双摄拍照智能oppoa92s手机 私语白 6GB+128GB（现货） 5g全网通 官方标配【晒单有礼】</div>
+        <p style="margin-top: 6px;font-size: 16px;color: #e93b3d"><span>￥1999</span>
+            <span><img style="width:20px;height: 20px;float: right" src="../imgs/红色购物车.png "></span></p>
+    </div>
+    <div>
+        <img src="https://img14.360buyimg.com/n7/jfs/t1/126207/11/6477/140174/5f03df74Eea845160/6c30c45c83bacf71.jpg!q70.dpg.webp">
+        <div class="botcontent">酷比魔方 KNote 5 Pro 11.6英寸win10二合一平板电脑windows学生128G  Pro(6G+128G SSD)</div>
+        <p style="margin-top: 6px;font-size: 16px;color: #e93b3d"><span>￥1699</span>
+            <span><img style="width:20px;height: 20px;float: right" src="../imgs/红色购物车.png "></span></p>
+    </div>
+    <div>
+        <img src="https://img14.360buyimg.com/n7/jfs/t1/20753/35/10378/114599/5c86129cEc354c829/cbb9752c957ba815.jpg!q70.dpg.webp">
+        <div class="botcontent">天语 i9 迷你智能 全网通4G 全面屏 人脸解锁 安卓袖珍手机 64GB大内存 超薄小手机 翡翠绿【2GB+16GB】</div>
+        <p style="margin-top: 6px;font-size: 16px;color: #e93b3d"><span>￥469</span>
+            <span><img style="width:20px;height: 20px;float: right" src="../imgs/红色购物车.png "></span></p>
+    </div>
+
+</div>
+
+</body>
+</html>

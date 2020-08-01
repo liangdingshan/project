@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>京东分类</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no, viewport-fit=cover">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #top{
+            width: 375px;
+            height: 45px;
+            display: flex;
+            text-align: center;
+        }
+        #top div:nth-child(1){
+            width: 40px;
+            height: 45px;
+        }
+        #top .topright{
+            width: 325px;
+            height: 45px;
+        }
+        #top .topright div{
+            width: 293px;
+            height: 30px;
+            margin-top: 8px;
+            background-color: ghostwhite;
+            border-radius: 30px 30px 30px 30px;
+        }
+        #body{
+            width: 375px;
+            height: 600px;
+            display: flex;
+            flex-flow: wrap;
+        }
+        #body #left{
+            width: 86px;
+            height: 600px;
+            border: solid 1px ghostwhite;
+        }
+        #body #left div{
+            width: 85px;
+            height: 46px;
+            text-align: center;
+            line-height: 46px;
+            color: #333;
+            font-size: 14px;
+            background-color: ghostwhite;
+        }
+        #body #left div:nth-child(1){
+            color: red;
+            font-size: 14px;
+            background-color: white;
+        }
+
+        #body #right{
+            width: 280px;
+            height: 590px;
+            display: flex;
+            flex-flow: wrap;
+            justify-content: space-between;
+        }
+        #body #right div{
+            width: 90px;
+            height: 105px;
+            text-align: center;
+        }
+        #body #right div:nth-child(1){
+            width: 280px;
+            height: 43px;
+            text-align: center;
+            line-height: 43px;
+        }
+        #nav{
+            width: 400px;
+            height:54px;
+            background-color: ghostwhite;
+            position: fixed;
+            bottom: 0;
+            display: flex;
+        }
+        #nav div{
+            width: 76px;
+            height: 54px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div style="width: 375px;height: 660px">
+
+    <div id="top">
+        <a href="京东手机端首页.html"><div>
+            <img style="width: 25px;height: 25px;margin-top: 10px" src="../imgs/返回1.png">
+        </div></a>
+
+        <div class="topright">
+
+            <div>
+                <img style="width: 20px;height: 20px;position: relative;top: 6px;right: 18px" src="../imgs/fangdajing.png">
+
+                <input style="border: solid 1px ghostwhite;background-color: ghostwhite" placeholder="云南白药牙膏">
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <div id="body">
+
+        <div id="left">
+            <div>热门推荐</div>
+            <div>手机数码</div>
+            <div>电脑办公</div>
+            <div>家用电器</div>
+            <div>计生情趣</div>
+            <div>美妆护肤</div>
+            <div>个户清洁</div>
+            <div>汽车生活</div>
+            <div>男装</div>
+            <div>男鞋</div>
+            <div>女装</div>
+            <div>女鞋</div>
+            <div>运动户外</div>
+        </div>
+
+        <div id="right">
+            <div>
+                <h4 style="float: left; font-size: 14px;color: #333;margin-left: 5px">热门分类</h4>
+                <span style="float: right;color: #848689;font-size: 10px;margin-right: 10px">
+                    <img style="width: 15px;height: 15px;position: relative;top: 3px;right: 2px" src="../imgs/排行榜2.png">排行榜
+                <img style="width: 15px;height: 15px;position:relative;top: 3px;" src="../imgs/返回.png"></span>
+            </div>
+
+            <div>
+                <img style="width: 70px;height: 70px" src="https://img11.360buyimg.com/focus/s140x140_jfs/t1/117080/5/10502/18158/5ef0103eE416ae569/898a7ac882ba6c63.jpg">
+                <p style="color: #686868;font-size: 10px">空调</p>
+            </div>
+            <div>
+                <img style="width: 70px;height: 70px" src="https://img10.360buyimg.com/focus/s140x140_jfs/t1/119891/13/5448/24096/5ef01048E096cfd33/260803efca5e8a73.jpg">
+                <p style="color: #686868;font-size: 10px">冰箱</p>
+            </div>
+            <div>
+                <img style="width: 70px;height: 70px" src="https://img12.360buyimg.com/focus/s140x140_jfs/t1/131424/31/274/19042/5ecb3bc2E96ef8448/0188085e6fd6cd12.png">
+                <p style="color: #686868;font-size: 10px">电脑</p>
+            </div>
+            <div>
+                <img style="width: 70px;height: 70px" src="https://img14.360buyimg.com/focus/s140x140_jfs/t27136/183/1628977274/31007/a6f7ed55/5be6ebd8Nb07ef492.png">
+                <p style="color: #686868;font-size: 10px">手机</p>
+            </div>
+            <div>
+                <img style="width: 70px;height: 70px" src="https://img20.360buyimg.com/focus/s140x140_jfs/t1/86638/37/11918/19572/5e3e4307E7606f742/0210ac72c0d9275e.jpg">
+                <p style="color: #686868;font-size: 10px">全面屏手机</p>
+            </div>
+            <div>
+                <img style="width: 70px;height: 70px" src="https://img20.360buyimg.com/focus/s140x140_jfs/t1/102972/19/11837/14987/5e3d8bdaEc8ffe21e/6119d3f773fcdacd.jpg">
+                <p style="color: #686868;font-size: 10px">游戏手机</p>
+            </div>
+            <div>
+                <img style="width: 70px;height: 70px" src="https://img30.360buyimg.com/focus/s140x140_jfs/t1/134182/23/366/16758/5eccb3caE2b8d0c6d/7ab40f9d9441a2a5.jpg">
+                <p style="color: #686868;font-size: 10px">保健品</p>
+            </div>
+            <div>
+                <img style="width: 70px;height: 70px" src="https://img14.360buyimg.com/focus/s140x140_jfs/t1/114862/21/8081/13361/5ecb398fEc7c98869/4b4101d0acbf4ced.jpg">
+                <p style="color: #686868;font-size: 10px">口罩</p>
+            </div>
+            <div>
+                <img style="width: 70px;height: 70px" src="https://img13.360buyimg.com/focus/s140x140_jfs/t1/136893/38/305/31308/5ecb84dcE410bc59a/36568e70a84f8807.jpg">
+                <p style="color: #686868;font-size: 10px">驱蚊用品</p>
+            </div>
+            <div>
+                <img style="width: 70px;height: 70px" src="https://img13.360buyimg.com/focus/s140x140_jfs/t1/120301/21/3027/11815/5ecb80a8Ed94ec15d/c20f3541c5618e17.jpg">
+                <p style="color: #686868;font-size: 10px">电磁炉</p>
+            </div>
+            <div>
+                <img style="width: 70px;height: 70px" src="https://img10.360buyimg.com/focus/s140x140_jfs/t1/111738/8/8168/9785/5ecb40ccE19924aec/1a1a91827d0f07ba.jpg">
+                <p style="color: #686868;font-size: 10px">电热水壶</p>
+            </div>
+            <div>
+                <img style="width: 70px;height: 70px" src="https://img11.360buyimg.com/focus/s140x140_jfs/t1/113143/20/8135/9835/5ecb81ccE22407538/e9a80b7af28e83a6.jpg">
+                <p style="color: #686868;font-size: 10px">数据线</p>
+            </div>
+            <div>
+                <img style="width: 70px;height: 70px" src="https://img14.360buyimg.com/focus/s140x140_jfs/t1/131006/3/360/19831/5eccb047E2e95a92e/b425dc4923a20c15.jpg">
+                <p style="color: #686868;font-size: 10px">图书</p>
+            </div>
+            <div>
+                <img style="width: 70px;height: 70px" src="https://img12.360buyimg.com/focus/s140x140_jfs/t1/116006/32/8107/3290/5ecb3fb1Eaf924484/552f5b1d08d42fee.jpg">
+                <p style="color: #686868;font-size: 10px">美妆护肤</p>
+            </div>
+            <div>
+                <img style="width: 70px;height: 70px" src="https://img20.360buyimg.com/focus/s140x140_jfs/t1/104017/10/11956/27906/5e3e8936E54437217/e5905d3b63d5f6fb.jpg">
+                <p style="color: #686868;font-size: 10px">除菌液</p>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="nav">
+        <div>
+            <a href="京东手机端首页.html"><img src="https://img11.360buyimg.com/jdphoto/s130x100_jfs/t1/81741/30/12345/4140/5d9c4b13E726f0a1e/82c582e7c375e4b3.png" style="width: 63px;height: 50px;"></a>
+        </div>
+        <div>
+            <img src="https://img11.360buyimg.com/jdphoto/s130x100_jfs/t1/48787/24/12910/3390/5d9c4b12Ee63270e4/4481f5b3dbad979d.png" style="width: 63px;height: 50px;">
+        </div>
+        <div>
+            <img src="https://img11.360buyimg.com/jdphoto/s130x100_jfs/t1/70651/38/12417/3194/5d9d3eafE12cde68b/2467c20113c50451.png" style="width: 63px;height: 50px;">
+        </div>
+        <div>
+            <img src="https://img11.360buyimg.com/jdphoto/s130x100_jfs/t1/64954/4/12406/3529/5d9c4b12Ee7a82735/f2fe0a88bf344736.png" style="width: 63px;height: 50px;">
+        </div>
+        <div>
+            <a href="京东登录界面.html"><img src="https://img11.360buyimg.com/jdphoto/s130x100_jfs/t1/68400/36/12368/3153/5d9c4b13E0e0d80a8/876c40f17d91ce44.png" style="width: 63px;height: 50px;"></a>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
